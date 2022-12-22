@@ -1,7 +1,16 @@
 package com.senforage.backforage.Entity;
-
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.repository.cdi.Eager;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class User {
     @Id
@@ -9,14 +18,10 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private String aname;
     private String email;
     private String password;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Role> roles = new ArrayList<>();
 }
