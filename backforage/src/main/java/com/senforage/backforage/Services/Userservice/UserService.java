@@ -1,8 +1,6 @@
 package com.senforage.backforage.Services.Userservice;
-
 import com.senforage.backforage.Entity.Role;
 import com.senforage.backforage.Entity.User;
-
 import java.util.List;
 
 public interface UserService {
