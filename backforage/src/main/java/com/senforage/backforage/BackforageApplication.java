@@ -23,7 +23,7 @@ public class BackforageApplication {
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-    /*
+
     @Bean
     CommandLineRunner run(UserService userService){
         return args -> {
@@ -42,6 +42,6 @@ public class BackforageApplication {
             userService.addRoleToUser("awa", "ROLE_GESCOMMERCIALE");
             userService.addRoleToUser("balla", "ROLE_GESCOMPTEUR");
         };
-    }*/
+    }
 
 }
